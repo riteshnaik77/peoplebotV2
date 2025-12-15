@@ -1,0 +1,80 @@
+# ========================================
+# HR Assistant Suite - Environment Variables
+# ========================================
+
+# ===== REQUIRED API KEYS =====
+
+# Groq API Key (for HR chatbot)
+GROQ_API_KEY=your_groq_api_key_here
+
+# Pinecone API Key (for vector database)
+PINECONE_API_KEY=your_pinecone_api_key_here
+
+# Google Gemini API Key (required if using Gemini)
+GOOGLE_API_KEY=your_google_gemini_api_key_here
+GEMINI_API_KEY=your_google_gemini_api_key_here
+
+# OpenAI API Key (OPTIONAL - only needed if using ChatGPT)
+OPENAI_API_KEY=your_openai_api_key_here
+
+
+# ===== MODEL SELECTION CONFIGURATION =====
+
+# Which AI provider to use for resume evaluation
+# Options: "gemini" (default, free), "groq" (paid, fast), or "openai" (paid, premium)
+MODEL_PROVIDER=gemini
+
+# Gemini model to use (only if MODEL_PROVIDER=gemini)
+# Options: gemini-2.5-flash (default), gemini-2.5-pro, gemini-2.0-flash
+GEMINI_MODEL=gemini-2.5-flash
+
+# Groq model to use (only if MODEL_PROVIDER=groq)
+# Options: openai/gpt-oss-120b (default, reasoning), llama-3.3-70b-versatile, llama-3.1-70b-versatile
+GROQ_MODEL=openai/gpt-oss-120b
+
+# Groq reasoning effort (only for reasoning models like gpt-oss)
+# Options: low, medium, high (default)
+GROQ_REASONING_EFFORT=high
+
+# OpenAI model to use (only if MODEL_PROVIDER=openai)
+# Options: gpt-4o-mini (default), gpt-4o, gpt-4-turbo, gpt-3.5-turbo
+OPENAI_MODEL=gpt-4o-mini
+
+
+# ===== FLASK CONFIGURATION =====
+
+# Flask secret key for session management
+FLASK_SECRET_KEY=your-secret-key-change-in-production-12345
+
+
+# ===== GOOGLE OAUTH (Optional) =====
+
+# Google OAuth credentials (for login functionality)
+GOOGLE_CLIENT_ID=your_google_oauth_client_id
+GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret
+
+
+# ========================================
+# QUICK START GUIDE
+# ========================================
+#
+# 1. Copy this file and rename it to ".env"
+# 2. Get API keys from:
+#    - Groq: https://console.groq.com/keys
+#    - Pinecone: https://app.pinecone.io/
+#    - Gemini: https://aistudio.google.com/app/apikey
+#    - OpenAI (optional): https://platform.openai.com/api-keys
+# 
+# 3. Choose your model provider:
+#    - For FREE: Set MODEL_PROVIDER=gemini (default)
+#    - For FAST: Set MODEL_PROVIDER=groq (uses existing GROQ_API_KEY)
+#    - For PREMIUM: Set MODEL_PROVIDER=openai (requires OPENAI_API_KEY)
+#
+# 4. Install dependencies:
+#    pip install -r requirements.txt
+#
+# 5. Run the application:
+#    python run.py
+#
+# ========================================
+

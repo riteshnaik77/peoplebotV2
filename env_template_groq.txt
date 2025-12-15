@@ -1,0 +1,66 @@
+# ========================================
+# YOUR .ENV FILE - Add These Lines
+# ========================================
+
+# ===== FOR GROQ SUPPORT =====
+# Add these 3 lines to your existing .env file:
+
+MODEL_PROVIDER="groq"
+GROQ_MODEL="openai/gpt-oss-120b"
+GROQ_REASONING_EFFORT="high"
+
+# ========================================
+# COMPLETE .ENV EXAMPLE WITH ALL 3 PROVIDERS
+# ========================================
+
+# Groq API Key (already configured)
+GROQ_API_KEY="your_existing_groq_key_here"
+
+# Pinecone API Key
+PINECONE_API_KEY="your_pinecone_key_here"
+
+# Google Gemini API Key
+GOOGLE_API_KEY="your_google_key_here"
+GEMINI_API_KEY="your_google_key_here"
+
+# OpenAI API Key (optional)
+OPENAI_API_KEY="your_openai_key_here"
+
+# ===== MODEL SELECTION =====
+# Choose ONE: "gemini", "groq", or "openai"
+MODEL_PROVIDER="groq"
+
+# Gemini Models
+GEMINI_MODEL="gemini-2.5-flash"
+
+# Groq Models
+GROQ_MODEL="openai/gpt-oss-120b"
+GROQ_REASONING_EFFORT="high"
+
+# OpenAI Models
+OPENAI_MODEL="gpt-4o-mini"
+
+# Flask Secret
+FLASK_SECRET_KEY="your-secret-key-here"
+
+# Google OAuth (optional)
+GOOGLE_CLIENT_ID="your_google_oauth_client_id"
+GOOGLE_CLIENT_SECRET="your_google_oauth_client_secret"
+
+# ========================================
+# QUICK REFERENCE
+# ========================================
+#
+# FREE (Development):
+#   MODEL_PROVIDER="gemini"
+#
+# FAST (Production - Recommended):
+#   MODEL_PROVIDER="groq"
+#   GROQ_MODEL="openai/gpt-oss-120b"
+#
+# PREMIUM (Best Quality):
+#   MODEL_PROVIDER="openai"
+#   OPENAI_MODEL="gpt-4o"
+#
+# ========================================
+
